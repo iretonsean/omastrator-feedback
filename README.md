@@ -1,0 +1,20 @@
+# Omastrator feedback
+
+Tell us what is broken, what works well, and what you want next in [Omastrator](https://seanireton.com/omastrator), the
+design app for Omarchy.
+
+## From the app (fastest)
+
+In Omastrator, open the project menu and choose **Report an issue or idea…**. Choose a kind, write one sentence, and your
+default agent writes the report. You read the exact text before anything is sent. If `gh` is signed in, the agent files it
+here. If not, GitHub opens with the report filled in, and you press **Submit**.
+
+## From the web
+
+[Open a new issue](https://github.com/iretonsean/omastrator-feedback/issues/new/choose) and choose **Bug**, **Works well**
+or **Idea**.
+
+## What a report contains
+
+Only what you see in the review: your text, the answers to at most three questions, and the system facts (Omastrator
+version, machine type, Omarchy version, agent). Log lines are included only if you turn them on. Issues here are public.

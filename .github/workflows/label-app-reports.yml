@@ -1,0 +1,21 @@
+# Reports sent from the app carry a marker such as <!-- omastrator-report kind=bug version=0.2.4-beta.1 -->. GitHub drops
+# labels that a person without write access sets, so this workflow adds them from the marker.
+name: Label app reports
+on:
+  issues:
+    types: [opened]
+permissions:
+  issues: write
+jobs:
+  label:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/github-script@v7
+        with:
+          script: |
+            const body = context.payload.issue.body || "";
+            const m = body.match(/<!--\s*omastrator-report\s+kind=(bug|works|idea)(?:\s+version=([0-9A-Za-z.\-]+))?\s*-->/);
+            if (!m) return;
+            const labels = [m[1], "from-app"];
+            if (m[2]) labels.push("v" + m[2].replace(/-beta\.\d+$/, "-beta"));
+            await github.rest.issues.addLabels({ ...context.repo, issue_number: context.payload.issue.number, labels });
