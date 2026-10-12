@@ -18,3 +18,9 @@ or **Idea**.
 
 Only what you see in the review: your text, the answers to at most three questions, and the system facts (Omastrator
 version, machine type, Omarchy version, agent). Log lines are included only if you turn them on. Issues here are public.
+
+## Your ideas and Omastrator
+
+By sending an issue or idea, you agree that Sean Ireton may use it in Omastrator, change it, or not use it, without
+payment, credit or any other obligation. Sending it gives you no rights in Omastrator. Omastrator is proprietary
+software: see its [licence](https://seanireton.com/omastrator/license.txt).
